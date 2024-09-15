@@ -49,7 +49,7 @@ todo_list_app/
 You can clone the repository to your local machine using the following command:
 
 ```bash
-git clone https://github.com/your-username/todo-list-app.git
+git clone https://github.com/GoodnessJames/To-Do-List-App.git
 cd todo_list_app
 ```
 
@@ -140,7 +140,8 @@ Displays the menu and handles user interaction:
 
 ## **Contributing**
 
-If you'd like to contribute to this project, feel free to fork the repository, make your changes, and submit a pull request. Contributions are welcome!
+If you'd like to contribute to this project, feel free to fork the repository, make your changes, and submit a pull request. 
+Contributions are welcome!
 
 ---
 
@@ -155,5 +156,5 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 If you have any questions or need further assistance, feel free to contact me:
 
 - Name: Goodness James Akoma
-- Email: your-email@example.com (update with your actual contact info)
-- GitHub: [your-github-profile](https://github.com/your-username)
+- Email: akomagoodness97@gmail.com
+- GitHub: [Github Profile](https://github.com/GoodnessJames)

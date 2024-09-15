@@ -16,7 +16,7 @@ This **To-Do List App** is a simple command-line Python project designed to help
 ## **Project Structure**
 
 ```
-todo_list_app/
+To-Do-List-App/
 │
 ├── main.py                 # Entry point for the app
 ├── task_manager.py         # Handles task operations (add, view, mark complete, delete)
@@ -50,7 +50,7 @@ You can clone the repository to your local machine using the following command:
 
 ```bash
 git clone https://github.com/GoodnessJames/To-Do-List-App.git
-cd todo_list_app
+cd To-Do-List-App
 ```
 
 Or create the project structure manually and copy the provided code.

@@ -1,0 +1,59 @@
+START program
+
+DECLARE tasks as an empty list
+
+FUNCTION load_tasks()
+    TRY to open the file "tasks.json"
+        LOAD tasks from the file
+    IF file does not exist, initialize tasks as empty list
+
+FUNCTION save_tasks()
+    WRITE tasks to the file "tasks.json"
+
+FUNCTION menu()
+    DISPLAY the menu options
+        1. View tasks
+        2. Add tasks
+        3. Mark Task as Complete
+        4. Delete Task
+        5. Exit 
+
+FUNCTION view_tasks()
+    IF tasks is empty   
+        PRINT "No tasks to show"
+    
+    ELSE
+        LOOP through each task in tasks
+            DISPLAY task number, description, and status
+
+FUNCTION add_task()
+    PROMPT user for task description
+    ADD task to tasks list with "complete = False"
+    CALL save_tasks()
+
+FUNCTION complete_task()
+    CALL view_tasks()
+    PROMPT user for task number to mark as complete
+    SET the chosen task "complete" field to True
+    CALL  save_tasks()
+
+FUNCTION delete_task()
+    CALL view_tasks()
+    PROMPT user for task number to delete
+    REMOVE the chosen task from tasks
+    CALL save_tasks()
+
+FUNCTION main()
+    CALL load_tasks()
+    WHILE True
+        CALL menu()
+        PROMPT user for choice
+        IF choice is 1, CALL view_tasks()
+        IF choice is 2, CALL add_task()
+        IF choice is 3, CALL complete_task()
+        IF choice is 4, CALL delete_task()
+        IF choice is 5, EXIT the loop
+
+CALL main()
+
+END program

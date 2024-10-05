@@ -1,16 +1,41 @@
+from datetime import datetime
+
+
 def add_task(tasks):
-    task = input("Enter a new task: ")
-    tasks.append({"task": task, "complete": False})
-    print(f"Task '{task} added!")
+    task_description = input("Enter the task description: ")
+    category = input("Enter the task category (e.g., Personal, Work, Fun): ")
+
+    while True:
+        deadline = input("Enter the task deadline (YYYY-MM-DD HH:MM) ")
+        try:
+            deadline = datetime.strptime(deadline, "%Y-%m-%d %H:%M")
+            break
+        except ValueError:
+            print("Invalid date format. Please use this format: YYYY-MM-DD HH:MM")
+            # deadline = datetime.now()
+
+    tasks.append({
+        "task": task_description, 
+        "complete": False, 
+        "category": category,
+        "deadline": deadline
+    })
+    print(f"Task '{task_description}' added with deadline '{deadline}'!")
 
 def view_tasks(tasks):
     if not tasks:
         print("No tasks to show!\nYou can start by adding a new task:)")
         return
+        
     print("\nYour To-Do List:")
     for idx, task in enumerate(tasks, 1):
         status = "[✔]" if task["complete"] else "[ ]"
-        print(f"{idx}. {status} {task['task']}")
+
+        if isinstance(task["deadline"], datetime):
+            deadline_str = task["deadline"].strftime("%Y-%m-%d %H:%M")
+        else: 
+            deadline_str = task["deadline"] if task.get("deadline") else "No deadline set"
+        print(f"{idx}. {status} {task['task']} (Category: {task.get('category', 'None')}), Deadline: {deadline_str}")
 
 def complete_task(tasks):
     view_tasks(tasks)

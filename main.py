@@ -7,7 +7,7 @@ def main():
 
     while True:
         menu()
-        choice = input("Choose an option: ")
+        choice = input("\nChoose an option: ")
 
         if choice == "1":
             view_tasks(tasks)

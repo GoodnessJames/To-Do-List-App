@@ -1,1 +1,26 @@
-[]
+[
+    {
+        "task": "abc",
+        "complete": false,
+        "category": "test",
+        "deadline": "2024-09-05 06:00"
+    },
+    {
+        "task": "Fixed the error",
+        "complete": true,
+        "category": "Fun",
+        "deadline": "2024-10-05 04:40"
+    },
+    {
+        "task": "ABC",
+        "complete": false,
+        "category": "xyz",
+        "deadline": null
+    },
+    {
+        "task": "Test deadline",
+        "complete": true,
+        "category": "Test",
+        "deadline": "2024-09-05 05:30"
+    }
+]
